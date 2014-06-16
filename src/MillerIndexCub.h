@@ -16,6 +16,13 @@ struct MillerReciprocalCubIndices
         /*any combination of integers gives correct cubic index*/
         return true;
     }
+    
+    friend std::ostream& operator<<(std::ostream& os, 
+            const MillerReciprocalCubIndices& idx)
+    {
+        os << "[" << idx.H << ", " << idx.K << ", " << idx.L << "]";
+        return os;
+    }
 };
 
 struct MillerDirectCubIndices
@@ -27,6 +34,13 @@ struct MillerDirectCubIndices
     {
         /*any combination of integers gives correct cubic index*/
         return true;
+    }
+    
+    friend std::ostream& operator<<(std::ostream& os, 
+            const MillerDirectCubIndices& idx)
+    {
+        os << "[" << idx.X << ", " << idx.Y << ", " << idx.Z << "]";
+        return os;
     }
 };
 
