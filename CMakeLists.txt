@@ -13,3 +13,8 @@ add_library(miller STATIC ${CPP_SOURCES})
 
 install(FILES ${H_SOURCES} 
         DESTINATION ${CMAKE_BINARY_DIR})
+        
+#tests
+add_subdirectory (tests)
+enable_testing ()
+add_test (NAME MyTest COMMAND Test)
