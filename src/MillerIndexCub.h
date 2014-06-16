@@ -7,6 +7,7 @@ enum {MillerCubIndicesDimension = 3};
 
 struct MillerReciprocalCubIndices
 {
+    MillerReciprocalCubIndices(double h, double k, double l) : H(h), K(k), L(l){}
     double H, K, L;
 
     bool isCorrect()
@@ -18,6 +19,7 @@ struct MillerReciprocalCubIndices
 
 struct MillerDirectCubIndices
 {
+    MillerDirectCubIndices(double x, double y, double z) : X(x), Y(y), Z(z){}
     double X, Y, Z;
     bool isCorrect()
     {

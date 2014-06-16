@@ -24,4 +24,5 @@ add_executable(${TEST_EXECUTABLE} ${CPP_SOURCES})
 add_dependencies(${TEST_EXECUTABLE} gmock_project)
 target_link_libraries(${TEST_EXECUTABLE} 
             miller
-            gmock pthread)
+            gmock
+            pthread)
