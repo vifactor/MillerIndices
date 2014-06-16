@@ -1,7 +1,7 @@
 #ifndef MILLERINDEXHEX_H
 #define MILLERINDEXHEX_H
 
-#include "Vector3d.h"
+#include "Vector3d.hpp"
 
 enum {MillerHexIndicesDimension = 4};
 
@@ -36,7 +36,7 @@ class MillerHexIndicesTransformator
 {
 public:
     MillerHexIndicesTransformator(double a, double c);
-    virtual ~MillerHexIndicesTransformator();
+    virtual ~MillerHexIndicesTransformator() {}
     Geometry::Vector3d toVector3d(const MillerReciprocalHexIndices& rec_index);
     Geometry::Vector3d toVector3d(const MillerDirectHexIndices& dir_index);
 protected:
