@@ -8,10 +8,11 @@ set( SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src )
 
 file(GLOB CPP_SOURCES "${SOURCES}/*.cpp")
 file(GLOB H_SOURCES "${SOURCES}/*.h")
+file(GLOB HPP_SOURCES "${SOURCES}/*.hpp")
 
 add_library(miller STATIC ${CPP_SOURCES})
 
-install(FILES ${H_SOURCES} 
+install(FILES ${H_SOURCES} ${HPP_SOURCES}
         DESTINATION ${CMAKE_BINARY_DIR})
         
 #tests
