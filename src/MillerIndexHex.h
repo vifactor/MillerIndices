@@ -21,6 +21,12 @@ struct MillerReciprocalHexIndices
         else
             return true;
     }
+    friend std::ostream& operator<<(std::ostream& os, 
+            const MillerReciprocalHexIndices& idx)
+    {
+        os << "[" << idx.H << ", " << idx.K << ", " << idx.I << ", " << idx.L << "]";
+        return os;
+    }
 };
 
 struct MillerDirectHexIndices
@@ -37,6 +43,12 @@ struct MillerDirectHexIndices
             return false;
         else
             return true;
+    }
+    friend std::ostream& operator<<(std::ostream& os, 
+            const MillerDirectHexIndices& idx)
+    {
+        os << "[" << idx.X << ", " << idx.Y << ", " << idx.T << ", " << idx.Z << "]";
+        return os;
     }
 };
 
