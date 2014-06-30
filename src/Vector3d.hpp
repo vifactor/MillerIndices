@@ -6,7 +6,6 @@
 
 #include <boost/numeric/ublas/vector.hpp>
 #include <boost/numeric/ublas/vector_expression.hpp>
-//#include <boost/numeric/ublas/io.hpp>
 
 namespace Geometry {    
     /**

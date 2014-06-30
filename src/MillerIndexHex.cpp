@@ -11,6 +11,12 @@ MillerHexIndicesTransformator::MillerHexIndicesTransformator(double a, double c)
         m_a3 = Vector3d(-a / 2.0, -sqrt(3.0)*a / 2.0, 0.0);
         m_cc = Vector3d(0.0, 0.0, c);
         /**reciprocal space hexagonal base vectors**/
+        /*
+         * A1 = (2 b1 - b2) / 3
+         * A2 = (-b1 + 2 a2) / 3
+         * A3 = -(b1 + b2) / 3
+         */
+        /*for details see Schwarzenbach D. J. Appl. Cryst. 36, 1270-1271*/
         m_A1 = Vector3d(2.0 * M_PI * 2.0 / (3.0 * a), 0.0, 0.0);
         m_A2 = Vector3d(2.0 * M_PI * (-1.0) / (3.0 * a),
                  2.0 * M_PI * 1.0 / (sqrt(3.0) * a),
