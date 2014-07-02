@@ -9,7 +9,7 @@ struct MillerReciprocalHexIndices
 {
     MillerReciprocalHexIndices(double h, double k, double i, double l) : 
                                                         H(h), K(k), I(i), L(l){}
-    MillerReciprocalHexIndices(double h, double k, double l) : 
+    MillerReciprocalHexIndices(double h = 0, double k = 0, double l = 0) : 
                                                         H(h), K(k), I(-(h + k)), L(l){}
     double H, K, I, L;
 
@@ -33,7 +33,7 @@ struct MillerDirectHexIndices
 {
     MillerDirectHexIndices(double x, double y, double t, double z) : 
                                                         X(x), Y(y), T(t), Z(z){}
-    MillerDirectHexIndices(double x, double y, double z) : 
+    MillerDirectHexIndices(double x = 0, double y = 0, double z = 0) : 
                                                         X(x), Y(y), T(-(x + y)), Z(z){}
     double X, Y, T, Z;
     bool isCorrect()
