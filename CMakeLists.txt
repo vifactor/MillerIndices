@@ -15,7 +15,13 @@ add_library(miller STATIC ${CPP_SOURCES})
 install(FILES ${H_SOURCES} ${HPP_SOURCES}
         DESTINATION ${CMAKE_BINARY_DIR})
         
-#tests
-add_subdirectory (tests)
-enable_testing ()
-add_test (NAME MyTest COMMAND Test)
+#building of tests is optional
+IF (BUILD_TESTING)
+    add_subdirectory (tests)
+    enable_testing ()
+
+    add_test (NAME MyTest COMMAND Test)
+    set_tests_properties (MyTest
+                          PROPERTIES PASS_REGULAR_EXPRESSION "Passed")
+ENDIF(BUILD_TESTING)
+
